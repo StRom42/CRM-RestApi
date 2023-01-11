@@ -8,4 +8,6 @@ include 'CRM:DataAccess'
 findProject(':CRM:DataAccess')?.name = 'DataAccess'
 include 'Application'
 include 'DataAccess'
+include 'Domain'
+include 'Domain'
 
