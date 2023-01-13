@@ -2,14 +2,12 @@ package Models.Incomings.Sources;
 
 import lombok.*;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import java.util.Objects;
 
 @Entity
 @DiscriminatorValue(value = "emailSource")
-@Getter
-@Setter
 @ToString
 @RequiredArgsConstructor
 public class EmailIncomingSource extends AbstractIncomingSource{
@@ -18,7 +16,7 @@ public class EmailIncomingSource extends AbstractIncomingSource{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EmailIncomingSource that = (EmailIncomingSource) o;
-        return id != null && Objects.equals(id, that.id);
+        return getId() != null && Objects.equals(getId(), that.getId());
     }
 
     @Override

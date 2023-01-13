@@ -2,13 +2,10 @@ package Models.Incomings.Sources;
 
 import lombok.*;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Getter
-@Setter
 @ToString
 @RequiredArgsConstructor
 @DiscriminatorValue(value = "phoneSource")
@@ -18,7 +15,7 @@ public class PhoneIncomingSource extends AbstractIncomingSource{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PhoneIncomingSource that = (PhoneIncomingSource) o;
-        return id != null && Objects.equals(id, that.id);
+        return getId() != null && Objects.equals(getId(), that.getId());
     }
 
     @Override

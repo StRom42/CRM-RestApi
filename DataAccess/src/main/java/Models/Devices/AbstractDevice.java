@@ -1,9 +1,9 @@
 package Models.Devices;
 
 import Models.Incomings.Sources.AbstractIncomingSource;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.util.Objects;
 
 @AllArgsConstructor
@@ -13,16 +13,19 @@ import java.util.Objects;
 @ToString
 @RequiredArgsConstructor
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class AbstractDevice {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    private Long id;
+
+    @Column
+    protected String deviceType = getClass().getSimpleName();
 
     @OneToOne(
             mappedBy = "device",
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @ToString.Exclude
     public AbstractIncomingSource source;
@@ -32,7 +35,7 @@ public class AbstractDevice {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AbstractDevice that = (AbstractDevice) o;
-        return id != null && Objects.equals(id, that.id);
+        return getId() != null && Objects.equals(getId(), that.getId());
     }
 
     @Override

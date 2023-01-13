@@ -1,8 +1,10 @@
 package Models.Clients;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
 import lombok.*;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,26 +15,21 @@ import java.util.Objects;
 @Entity
 @ToString
 @RequiredArgsConstructor
-@Table(name = "contactInfo")
+@Embeddable
 public class ContactInfo implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    public Long id;
-
     @Column
-    public String email;
+    private String email;
     @Column
-    public String phoneNumber;
+    private String phoneNumber;
     @Column
-    public String telegramNickname;
+    private String telegramNickname;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ContactInfo that = (ContactInfo) o;
-        return id != null && Objects.equals(id, that.id);
+        return Objects.equals(email, that.email) && Objects.equals(phoneNumber, that.phoneNumber) && Objects.equals(telegramNickname, that.telegramNickname);
     }
 
     @Override

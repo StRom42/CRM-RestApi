@@ -2,8 +2,8 @@ package Models.Incomings.Sources;
 
 import lombok.*;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import java.util.Objects;
 
 @Entity
@@ -16,7 +16,7 @@ public class MessengerIncomingSource extends AbstractIncomingSource{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MessengerIncomingSource that = (MessengerIncomingSource) o;
-        return id != null && Objects.equals(id, that.id);
+        return getId() != null && Objects.equals(getId(), that.getId());
     }
 
     @Override

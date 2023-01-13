@@ -1,14 +1,11 @@
 package Models.Users.Roles;
 
-import Models.Users.User;
+import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
 
-import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,7 +17,7 @@ import java.util.Set;
 @Table(name = "Roles")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "roleType", discriminatorType = DiscriminatorType.STRING)
-public class AbstractRole implements Serializable {
+public class AbstractRole implements GrantedAuthority, Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -29,17 +26,17 @@ public class AbstractRole implements Serializable {
     protected String roleType;
 
     @Column
-    public boolean isReplyingPermitted() {
+    protected boolean isReplyingPermitted() {
         return false;
     }
 
     @Column
-    public boolean isReportingPermitted() {
+    protected boolean isReportingPermitted() {
         return false;
     }
 
     @Column
-    public boolean isConfiguringPermitted() {
+    protected boolean isConfiguringPermitted() {
         return false;
     }
 
@@ -48,11 +45,16 @@ public class AbstractRole implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AbstractRole that = (AbstractRole) o;
-        return id != null && Objects.equals(id, that.id);
+        return getId() != null && Objects.equals(getId(), that.getId());
     }
 
     @Override
     public int hashCode() {
         return getClass().hashCode();
+    }
+
+    @Override
+    public String getAuthority() {
+        return getRoleType();
     }
 }

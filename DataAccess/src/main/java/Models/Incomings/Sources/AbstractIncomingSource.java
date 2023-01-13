@@ -2,15 +2,17 @@ package Models.Incomings.Sources;
 
 import Models.Devices.AbstractDevice;
 import Models.Incomings.AbstractIncoming;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Getter
+@Setter
 @ToString
 @RequiredArgsConstructor
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -19,18 +21,18 @@ import java.util.Objects;
 public class AbstractIncomingSource {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "device_id")
-    public AbstractDevice device;
+    private AbstractDevice device;
 
     @Column(name = "sourceType")
-    public String sourceType;
+    protected String sourceType;
 
     @OneToMany(mappedBy = "source", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @ToString.Exclude
-    public Collection<AbstractIncoming> incoming;
+    private Collection<AbstractIncoming> incoming;
 
     @Override
     public boolean equals(Object o) {

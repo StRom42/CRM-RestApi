@@ -2,15 +2,14 @@ package Models.Users.Roles;
 
 import lombok.*;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import java.util.Objects;
 
 @Entity
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 @DiscriminatorValue(value = "subordinate")
 public class SubordinateRole extends AbstractRole{
     @Override
