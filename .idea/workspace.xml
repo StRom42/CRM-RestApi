@@ -5,31 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2b9bd6e-48f7-40fe-b45c-3799972770eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Devices/EmailDevice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/EmailMessageIncoming.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IContactInfoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IDeviceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IIncomingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IIncomingSourceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IRoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/Services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/Controllers/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Clients/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Clients/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Clients/ContactInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Devices/AbstractDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Devices/AbstractDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/AbstractIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/AbstractIncoming.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/AbstractIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/AbstractIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/EmailIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/EmailIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/MessengerIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/MessengerIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/PhoneIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/PhoneIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AbstractRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AbstractRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AdminRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AdminRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/HeadRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/HeadRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/SubordinateRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/SubordinateRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Web/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +45,8 @@
       <list>
         <option value="Enum" />
         <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -123,13 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673463383649</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add repositories">
+      <created>1673631586132</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673631586132</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: crm project start" />
     <MESSAGE value="feat: add jpa models" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add jpa models" />
+    <MESSAGE value="feat: add repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add repositories" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
