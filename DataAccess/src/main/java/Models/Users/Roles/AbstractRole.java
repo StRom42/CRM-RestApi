@@ -5,56 +5,39 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @ToString
 @RequiredArgsConstructor
 @Entity
 @Table(name = "Roles")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "roleType", discriminatorType = DiscriminatorType.STRING)
-public class AbstractRole implements GrantedAuthority, Serializable {
+public abstract class AbstractRole implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
     @Column(name = "roleType")
-    protected String roleType;
+    public abstract String getRoleType();
 
-    @Column
-    protected boolean isReplyingPermitted() {
-        return false;
-    }
-
-    @Column
-    protected boolean isReportingPermitted() {
-        return false;
-    }
-
-    @Column
-    protected boolean isConfiguringPermitted() {
-        return false;
-    }
+    @Transient
+    protected Set<GrantedAuthority> permissions = Collections.emptySet();
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AbstractRole that = (AbstractRole) o;
-        return getId() != null && Objects.equals(getId(), that.getId());
+        return getRoleType() != null && Objects.equals(getRoleType(), getRoleType());
+    }
+
+    public Set<GrantedAuthority> getPermissions(){
+        return permissions;
     }
 
     @Override
     public int hashCode() {
         return getClass().hashCode();
-    }
-
-    @Override
-    public String getAuthority() {
-        return getRoleType();
     }
 }

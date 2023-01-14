@@ -13,11 +13,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Application" />
-            <option value="$PROJECT_DIR$/CRM" />
-            <option value="$PROJECT_DIR$/CRM/Application" />
-            <option value="$PROJECT_DIR$/CRM/DataAccess" />
             <option value="$PROJECT_DIR$/DataAccess" />
-            <option value="$PROJECT_DIR$/Domain" />
             <option value="$PROJECT_DIR$/Web" />
           </set>
         </option>

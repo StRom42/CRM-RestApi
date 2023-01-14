@@ -1,23 +1,16 @@
-plugins {
-    id 'java'
-}
-
-group 'com.crm.application'
+group 'com.crm'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    implementation project(path: ':DataAccess')
+    implementation project(':DataAccess')
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     // https://mvnrepository.com/artifact/org.springframework.security/spring-security-core
     implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.0.1'
     // https://mvnrepository.com/artifact/org.springframework/spring-core
     implementation group: 'org.springframework', name: 'spring-core', version: '6.0.0'
-
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa
+    implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '3.0.0'
 
 }
 

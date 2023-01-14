@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2b9bd6e-48f7-40fe-b45c-3799972770eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/Services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/Controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/Contracts/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/ObserverRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/Permissions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/Config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/Services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AbstractRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AbstractRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AdminRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AdminRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/HeadRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/HeadRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/SubordinateRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/SubordinateRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Web/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +54,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -112,14 +123,22 @@
       <option name="project" value="LOCAL" />
       <updated>1673631586132</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add controllers and config">
+      <created>1673635859502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673635859502</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init: crm project start" />
     <MESSAGE value="feat: add jpa models" />
     <MESSAGE value="feat: add repositories" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add repositories" />
+    <MESSAGE value="feat: add controllers and config" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add controllers and config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

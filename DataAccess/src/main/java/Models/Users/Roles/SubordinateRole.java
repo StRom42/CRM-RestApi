@@ -5,16 +5,22 @@ import lombok.*;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
 @ToString
-@DiscriminatorValue(value = "subordinate")
 public class SubordinateRole extends AbstractRole{
+    {
+        permissions = Set.of(
+                Permissions.ReplyPermission
+        );
+    }
+
     @Override
-    public boolean isReplyingPermitted() {
-        return true;
+    public String getRoleType() {
+        return "subordinate";
     }
 
     @Override
@@ -22,7 +28,7 @@ public class SubordinateRole extends AbstractRole{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         SubordinateRole that = (SubordinateRole) o;
-        return getId() != null && Objects.equals(getId(), that.getId());
+        return getRoleType() != null && Objects.equals(getRoleType(), that.getRoleType());
     }
 
     @Override

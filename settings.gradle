@@ -1,13 +1,5 @@
 rootProject.name = 'CRM-RestApi'
 include 'Web'
-include 'CRM'
-include 'Web'
-include 'CRM:Application'
-findProject(':CRM:Application')?.name = 'Application'
-include 'CRM:DataAccess'
-findProject(':CRM:DataAccess')?.name = 'DataAccess'
 include 'Application'
 include 'DataAccess'
-include 'Domain'
-include 'Domain'
 

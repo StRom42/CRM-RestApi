@@ -4,18 +4,30 @@ import lombok.*;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
-@DiscriminatorValue(value = "admin")
 public class AdminRole extends AbstractRole{
+    {
+        permissions = Set.of(
+                Permissions.ConfigurationPermission,
+                Permissions.ReplyPermission,
+                Permissions.ReportPermission
+        );
+    }
+
+
     @Override
-    public boolean isConfiguringPermitted() {
-        return true;
+    public String getRoleType() {
+        return "admin";
     }
 
     @Override
@@ -23,7 +35,7 @@ public class AdminRole extends AbstractRole{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AdminRole adminRole = (AdminRole) o;
-        return getId() != null && Objects.equals(getId(), adminRole.getId());
+        return getRoleType() != null && Objects.equals(getRoleType(), adminRole.getRoleType());
     }
 
     @Override

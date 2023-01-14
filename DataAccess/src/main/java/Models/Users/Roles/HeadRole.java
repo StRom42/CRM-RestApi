@@ -5,17 +5,23 @@ import lombok.*;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
 @ToString
 @RequiredArgsConstructor
-@DiscriminatorValue(value = "head")
 public class HeadRole extends AbstractRole {
     @Override
-    public boolean isReportingPermitted() {
-        return true;
+    public String getRoleType() {
+        return "head";
+    }
+
+    {
+        permissions = Set.of(
+                Permissions.ReportPermission
+        );
     }
 
     @Override
@@ -23,7 +29,7 @@ public class HeadRole extends AbstractRole {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HeadRole headRole = (HeadRole) o;
-        return getId() != null && Objects.equals(getId(), headRole.getId());
+        return getRoleType() != null && Objects.equals(getRoleType(), headRole.getRoleType());
     }
 
     @Override
