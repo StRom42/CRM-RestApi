@@ -1,7 +1,7 @@
 package com.crm.data.Models.Users;
 
 import com.crm.data.Models.Users.Roles.AbstractRole;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;

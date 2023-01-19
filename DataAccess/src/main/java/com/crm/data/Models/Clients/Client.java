@@ -1,7 +1,7 @@
 package com.crm.data.Models.Clients;
 
 import com.crm.data.Models.Incomings.AbstractIncoming;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
@@ -10,7 +10,6 @@ import java.util.Objects;
 import java.util.Set;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @ToString
 @RequiredArgsConstructor

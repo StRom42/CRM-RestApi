@@ -2,7 +2,7 @@ package com.crm.data.Models.Incomings.Sources;
 
 import lombok.*;
 
-import jakarta.persistence.Entity;
+import javax.persistence.Entity;
 import java.util.Objects;
 
 @Entity

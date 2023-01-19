@@ -1,10 +1,13 @@
 package com.crm.data.Models.Departments;
 
 import com.crm.data.Models.Users.User;
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 import org.hibernate.Hibernate;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
@@ -13,7 +16,6 @@ import java.util.Set;
 @Entity
 @ToString
 @RequiredArgsConstructor
-@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "departments")
 public class Department implements Serializable {

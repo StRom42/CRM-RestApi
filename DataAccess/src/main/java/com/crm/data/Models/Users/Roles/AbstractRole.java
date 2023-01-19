@@ -1,6 +1,6 @@
 package com.crm.data.Models.Users.Roles;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,6 @@ import java.util.Objects;
 import java.util.Set;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @ToString
 @RequiredArgsConstructor
 @Entity
@@ -22,8 +21,7 @@ import java.util.Set;
 @DiscriminatorColumn(name = "type_of_role", discriminatorType = DiscriminatorType.STRING)
 public abstract class AbstractRole implements Serializable {
     @Id
-    @Column(name = "type_of_role", insertable = false, updatable = false)
-    public String roleType;
+    protected String roleType;
 
     @Transient
     protected Set<GrantedAuthority> permissions = Collections.emptySet();

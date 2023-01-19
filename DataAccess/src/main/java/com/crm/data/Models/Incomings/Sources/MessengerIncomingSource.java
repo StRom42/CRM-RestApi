@@ -1,6 +1,6 @@
 package com.crm.data.Models.Incomings.Sources;
 
-import jakarta.persistence.Entity;
+import javax.persistence.Entity;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 

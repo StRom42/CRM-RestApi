@@ -1,15 +1,14 @@
 package com.crm.data.Models.Devices;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import lombok.*;
 
 @Entity
 @ToString
 @RequiredArgsConstructor
 @AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "emailDevices")
 public class EmailDevice extends AbstractDevice{
     @Column

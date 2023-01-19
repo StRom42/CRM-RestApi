@@ -2,14 +2,13 @@ package com.crm.data.Models.Incomings.Sources;
 
 import com.crm.data.Models.Devices.AbstractDevice;
 import com.crm.data.Models.Incomings.AbstractIncoming;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.util.Collection;
 import java.util.Objects;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @ToString
 @RequiredArgsConstructor

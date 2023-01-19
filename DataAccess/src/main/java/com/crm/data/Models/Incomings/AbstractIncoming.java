@@ -2,7 +2,7 @@ package com.crm.data.Models.Incomings;
 
 import com.crm.data.Models.Incomings.Sources.AbstractIncomingSource;
 import com.crm.data.Models.Clients.Client;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.util.Objects;

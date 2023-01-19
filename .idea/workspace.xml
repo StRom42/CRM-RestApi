@@ -4,48 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b9bd6e-48f7-40fe-b45c-3799972770eb" name="Changes" comment="feat: add role system and security config">
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Configuration/ApplicationConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Configuration/DataAccessConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Departments/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/EmailDevice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IDepartmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/MvcConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/WebConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/UserController.java" afterDir="false" />
+    <list default="true" id="b2b9bd6e-48f7-40fe-b45c-3799972770eb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SwaggerConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/src/main/java/Contracts/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Contracts/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/src/main/java/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Clients/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/ContactInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Devices/AbstractDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/AbstractDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Devices/EmailDevice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/AbstractIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/AbstractIncoming.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/EmailMessageIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/EmailMessageIncoming.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/AbstractIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/AbstractIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/EmailIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/EmailIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/MessengerIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/MessengerIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Incomings/Sources/PhoneIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/PhoneIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AbstractRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AbstractRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/AdminRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AdminRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/HeadRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/HeadRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/ObserverRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/ObserverRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/Permissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/Permissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/Roles/SubordinateRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/SubordinateRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Models/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IDeviceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IDeviceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IIncomingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IIncomingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IIncomingSourceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IIncomingSourceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IRoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IRoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/Repositories/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/Config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/Controllers/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Configuration/DataAccessConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Configuration/DataAccessConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/ContactInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Departments/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Departments/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/AbstractDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/AbstractDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/EmailDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/EmailDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/AbstractIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/AbstractIncoming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/EmailMessageIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/EmailMessageIncoming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/AbstractIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/AbstractIncomingSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/EmailIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/EmailIncomingSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/MessengerIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/MessengerIncomingSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/PhoneIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/PhoneIncomingSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AbstractRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AbstractRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AdminRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AdminRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/HeadRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/HeadRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/ObserverRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/ObserverRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/SubordinateRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/SubordinateRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Web/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/MvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/MvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/RootController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673721789948</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: fix configurations">
+      <created>1673814739869</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673814739869</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,7 +173,8 @@
     <MESSAGE value="feat: add repositories" />
     <MESSAGE value="feat: add controllers and config" />
     <MESSAGE value="feat: add role system and security config" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add role system and security config" />
+    <MESSAGE value="fix: fix configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix configurations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

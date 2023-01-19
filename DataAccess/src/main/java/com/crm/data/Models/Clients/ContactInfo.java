@@ -1,15 +1,14 @@
 package com.crm.data.Models.Clients;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import lombok.*;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @ToString
 @RequiredArgsConstructor
 @Embeddable

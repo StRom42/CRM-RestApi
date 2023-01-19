@@ -1,9 +1,9 @@
 package com.crm.data.Models.Users.Roles;
 
-import jakarta.persistence.DiscriminatorValue;
+import javax.persistence.DiscriminatorValue;
 import lombok.*;
 
-import jakarta.persistence.Entity;
+import javax.persistence.Entity;
 import java.util.Objects;
 import java.util.Set;
 
@@ -16,6 +16,7 @@ import java.util.Set;
 public class HeadRole extends AbstractRole {
 
     {
+        roleType = "admin";
         permissions = Set.of(
                 Permissions.ReportPermission
         );
