@@ -1,5 +1,6 @@
 package com.crm.data.Models.Incomings.Sources;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
@@ -9,6 +10,7 @@ import java.util.Objects;
 @Entity
 @ToString
 @RequiredArgsConstructor
+@DiscriminatorValue("messengerSource")
 public class MessengerIncomingSource extends AbstractIncomingSource{
     @Override
     public String getSourceType() {

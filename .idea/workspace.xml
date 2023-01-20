@@ -5,37 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2b9bd6e-48f7-40fe-b45c-3799972770eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SwaggerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Dto/SignUpDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Dto/UpdateUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Exceptions/Duplicate/UserDuplicateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Login/LoginValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Login/ValidLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Password/PasswordValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Password/ValidPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/UserName/UserNameValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/UserName/ValidUserName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Reports/AbstractReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Utils/FieldErrorsPacker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Contracts/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Contracts/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Configuration/DataAccessConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Configuration/DataAccessConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/ContactInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/ContactInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Departments/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Departments/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/AbstractDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/AbstractDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/EmailDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/EmailDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/AbstractIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/AbstractIncoming.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/EmailMessageIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/EmailMessageIncoming.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/AbstractIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/AbstractIncomingSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/EmailIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/EmailIncomingSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/MessengerIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/MessengerIncomingSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/PhoneIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/PhoneIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AbstractRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AbstractRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AdminRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AdminRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/HeadRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/HeadRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/ObserverRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/ObserverRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/SubordinateRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/SubordinateRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Web/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/MvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/MvcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/RootController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/RootController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,9 @@
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="Enum" />
         <option value="module-info" />
+        <option value="Record" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -89,22 +86,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/gradle/.gradle&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "D:/Java-workspace/CRM-RestApi/Application/src/main/java/com/crm/application/Validation/Username",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java-workspace\CRM-RestApi\Application\src\main\java\com\crm\application\Validation\Username" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java-workspace\CRM-RestApi\Web\src\main\resources" />
@@ -164,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673814739869</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix: gradle build fix and add swagger">
+      <created>1674146933097</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674146933097</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -174,7 +181,8 @@
     <MESSAGE value="feat: add controllers and config" />
     <MESSAGE value="feat: add role system and security config" />
     <MESSAGE value="fix: fix configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix configurations" />
+    <MESSAGE value="fix: gradle build fix and add swagger" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: gradle build fix and add swagger" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -24,7 +24,7 @@ public abstract class AbstractIncomingSource {
     @JoinColumn(name = "device_id")
     private AbstractDevice device;
 
-    @Column(name = "sourceType")
+    @Transient
     public abstract String getSourceType();
 
     @OneToMany(mappedBy = "source", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

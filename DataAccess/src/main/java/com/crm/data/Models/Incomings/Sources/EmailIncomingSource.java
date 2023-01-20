@@ -2,12 +2,14 @@ package com.crm.data.Models.Incomings.Sources;
 
 import lombok.*;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import java.util.Objects;
 
 @Entity
 @ToString
 @RequiredArgsConstructor
+@DiscriminatorValue("emailSource")
 public class EmailIncomingSource extends AbstractIncomingSource{
     @Override
     public String getSourceType() {

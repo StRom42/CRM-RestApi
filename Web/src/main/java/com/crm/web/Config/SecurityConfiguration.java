@@ -40,7 +40,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
         http
                 .authorizeRequests()
-                    .antMatchers("/", "/health", "/login**", "/error**").permitAll()
+                    .antMatchers("/user/signup").not().authenticated()
+                    .antMatchers("/", "/health", "/version", "/login**", "/error**").permitAll()
                     .antMatchers(AUTH_WHITELIST).permitAll()
                     .antMatchers("/messages**").hasAuthority(Permissions.ReplyPermission.name())
                     .antMatchers("/reports**").hasAuthority(Permissions.ReportPermission.name())

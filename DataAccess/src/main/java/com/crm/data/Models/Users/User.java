@@ -24,8 +24,11 @@ public class User implements Serializable, UserDetails {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    @Column
     private String name;
+    @Column
     private String login;
+    @Column
     private String password;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(

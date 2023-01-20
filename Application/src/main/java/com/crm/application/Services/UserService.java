@@ -1,6 +1,9 @@
 package com.crm.application.Services;
 
 import com.crm.application.Contracts.IUserService;
+import com.crm.application.Dto.SignUpDto;
+import com.crm.application.Dto.UpdateUserDto;
+import com.crm.application.Exceptions.Duplicate.UserDuplicateException;
 import com.crm.data.Models.Users.Roles.ObserverRole;
 import com.crm.data.Models.Users.User;
 import com.crm.data.Repositories.IUserRepository;
@@ -9,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
 
 import java.util.Collections;
 
@@ -30,19 +34,28 @@ public class UserService implements IUserService {
         return user;
     }
 
-    public boolean addUser(User user){
-        if (userRepository.findByLogin(user.getLogin()) != null) {
-            return false;
+    public boolean addUser(SignUpDto dto) throws UserDuplicateException {
+        if (userRepository.findByLogin(dto.login) != null) {
+            throw new UserDuplicateException(dto.login);
         }
 
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        User user = new User();
+
+        user.setName(dto.name);
+        user.setLogin(dto.login);
+        user.setPassword(passwordEncoder.encode(dto.password));
         user.setRoles(Collections.singleton(new ObserverRole()));
         userRepository.save(user);
         return true;
     }
 
     @Override
-    public void updateUser(User user) {
+    public boolean updateUser(User user, UpdateUserDto update) {
+        return false;
+    }
 
+    @Override
+    public boolean deleteUser(User user) {
+        return false;
     }
 }

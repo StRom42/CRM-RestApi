@@ -8,6 +8,7 @@ import java.util.Objects;
 @Entity
 @ToString
 @RequiredArgsConstructor
+@DiscriminatorValue("phoneSource")
 public class PhoneIncomingSource extends AbstractIncomingSource{
     @Override
     public String getSourceType() {
