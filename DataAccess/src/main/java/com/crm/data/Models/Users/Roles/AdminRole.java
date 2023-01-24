@@ -2,26 +2,20 @@ package com.crm.data.Models.Users.Roles;
 
 import javax.persistence.DiscriminatorValue;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Entity;
+import javax.persistence.Transient;
 
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Getter
-@Setter
 @ToString
-@RequiredArgsConstructor
 @DiscriminatorValue("admin")
 public class AdminRole extends AbstractRole{
     {
         roleType = "admin";
-        permissions = Set.of(
-                Permissions.ConfigurationPermission,
-                Permissions.ReplyPermission,
-                Permissions.ReportPermission
-        );
     }
 
     @Override
@@ -30,6 +24,16 @@ public class AdminRole extends AbstractRole{
         if (o == null || getClass() != o.getClass()) return false;
         AdminRole adminRole = (AdminRole) o;
         return getRoleType() != null && Objects.equals(getRoleType(), adminRole.getRoleType());
+    }
+
+    @Transient
+    @Override
+    public Set<GrantedAuthority> getPermissions() {
+        return Set.of(
+                Permissions.ConfigurationPermission,
+                Permissions.ReplyPermission,
+                Permissions.ReportPermission
+        );
     }
 
     @Override

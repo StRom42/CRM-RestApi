@@ -20,7 +20,8 @@ import java.util.Set;
 @Table(name = "departments")
 public class Department implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Long id;
 
     @OneToMany(fetch = FetchType.LAZY)

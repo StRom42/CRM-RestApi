@@ -16,7 +16,7 @@ import java.util.Objects;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class AbstractDevice {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column

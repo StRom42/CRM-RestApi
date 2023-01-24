@@ -7,6 +7,7 @@ import lombok.*;
 
 import java.util.Collection;
 import java.util.Objects;
+import java.util.Set;
 
 @AllArgsConstructor
 @Entity
@@ -17,11 +18,12 @@ import java.util.Objects;
 @Table(name = "IncomingSource")
 public abstract class AbstractIncomingSource {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "device_id")
+    @JoinColumn(name = "device_id", nullable = false)
     private AbstractDevice device;
 
     @Transient
@@ -29,7 +31,7 @@ public abstract class AbstractIncomingSource {
 
     @OneToMany(mappedBy = "source", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @ToString.Exclude
-    private Collection<AbstractIncoming> incoming;
+    private Set<AbstractIncoming> incoming;
 
     @Override
     public boolean equals(Object o) {
@@ -64,7 +66,7 @@ public abstract class AbstractIncomingSource {
         return incoming;
     }
 
-    public void setIncoming(Collection<AbstractIncoming> incoming) {
+    public void setIncoming(Set<AbstractIncoming> incoming) {
         this.incoming = incoming;
     }
 }

@@ -20,21 +20,21 @@ import java.util.stream.Collectors;
 @Table(name = "USRS")
 public class User implements Serializable, UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String name;
-    @Column
+    @Column(nullable = false)
     private String login;
-    @Column
+    @Column(nullable = false)
     private String password;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "users_role",
-            joinColumns = @JoinColumn(name = "role_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id")
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<AbstractRole> roles = new HashSet<>();
 

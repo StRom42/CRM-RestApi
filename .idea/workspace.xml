@@ -4,33 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b9bd6e-48f7-40fe-b45c-3799972770eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Dto/SignUpDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Dto/UpdateUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Exceptions/Duplicate/UserDuplicateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Login/LoginValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Login/ValidLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Password/PasswordValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/Password/ValidPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/UserName/UserNameValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Validation/UserName/ValidUserName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Reports/AbstractReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Utils/FieldErrorsPacker.java" afterDir="false" />
+    <list default="true" id="b2b9bd6e-48f7-40fe-b45c-3799972770eb" name="Changes" comment="feat: add custom user validation">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Lead/Lead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Lead/LeadState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Reports/Report.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Reports/ReportTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/ILeadRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/ILeadStateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IReportRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Repositories/IReportTemplateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/db/migration/V1__Db_init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/db/migration/V2__Add_roles_and_admin.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Contracts/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Contracts/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/crm/application/Services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Clients/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Departments/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Departments/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/AbstractDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Devices/AbstractDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/AbstractIncoming.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/AbstractIncoming.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/AbstractIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/AbstractIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/EmailIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/EmailIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/MessengerIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/MessengerIncomingSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/PhoneIncomingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Incomings/Sources/PhoneIncomingSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Reports/AbstractReport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AbstractRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AbstractRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AdminRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/AdminRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/HeadRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/HeadRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/ObserverRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/ObserverRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/SubordinateRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/Roles/SubordinateRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/src/main/java/com/crm/data/Models/Users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Web/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/MainApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/RootController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/crm/web/Controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +65,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="Enum" />
         <option value="module-info" />
         <option value="Record" />
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -96,7 +98,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "Console"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -107,6 +109,7 @@
       <recent name="D:\Java-workspace\CRM-RestApi\Application\src\main\java\com\crm\application\Validation\Username" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java-workspace\CRM-RestApi\Web\src\main\resources\db\mirgration" />
       <recent name="D:\Java-workspace\CRM-RestApi\Web\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -171,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674146933097</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: add custom user validation">
+      <created>1674239903875</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674239903875</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,7 +192,8 @@
     <MESSAGE value="feat: add role system and security config" />
     <MESSAGE value="fix: fix configurations" />
     <MESSAGE value="fix: gradle build fix and add swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: gradle build fix and add swagger" />
+    <MESSAGE value="feat: add custom user validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add custom user validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

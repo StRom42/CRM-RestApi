@@ -12,19 +12,15 @@ import java.util.Collections;
 import java.util.Objects;
 import java.util.Set;
 
-@AllArgsConstructor
 @ToString
-@RequiredArgsConstructor
 @Entity
-@Table(name = "Roles")
+@Table(name = "roles")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "type_of_role", discriminatorType = DiscriminatorType.STRING)
 public abstract class AbstractRole implements Serializable {
     @Id
+    @Column(name = "roleTypeId", nullable = false)
     protected String roleType;
-
-    @Transient
-    protected Set<GrantedAuthority> permissions = Collections.emptySet();
 
     @Override
     public boolean equals(Object o) {
@@ -34,9 +30,8 @@ public abstract class AbstractRole implements Serializable {
         return getRoleType() != null && Objects.equals(getRoleType(), getRoleType());
     }
 
-    public Set<GrantedAuthority> getPermissions(){
-        return permissions;
-    }
+    @Transient
+    public abstract Set<GrantedAuthority> getPermissions();
 
     @Override
     public int hashCode() {

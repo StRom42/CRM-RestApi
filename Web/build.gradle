@@ -13,6 +13,8 @@ dependencies {
     implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: springfoxVersion
     implementation group: 'io.springfox', name: 'springfox-schema', version: springfoxVersion
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: springVersion
+    implementation group: 'org.flywaydb', name: 'flyway-core', version: '6.5.7'
+
 
 }
 

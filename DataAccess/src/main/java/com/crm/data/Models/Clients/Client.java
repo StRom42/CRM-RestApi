@@ -16,11 +16,13 @@ import java.util.Set;
 @Table(name = "CLIENTS")
 public class Client implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private Long id;
-    @Column
+    @Column(nullable = false)
     private String name;
     @Embedded
+    @Column(nullable = false)
     private ContactInfo contactInfo;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
