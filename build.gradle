@@ -9,6 +9,11 @@ version '1.0-SNAPSHOT'
 
 ext{
     springVersion = "2.6.7"
+    jsonwebtokenVersion = '0.11.1'
+    flydbVersion = '6.5.7'
+    lombokVersion = "6.6.1"
+    postgresqlDriverVersion = '42.4.3'
+
 }
 
 

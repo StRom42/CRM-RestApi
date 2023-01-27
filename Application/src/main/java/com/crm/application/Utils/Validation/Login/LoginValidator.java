@@ -1,4 +1,4 @@
-package com.crm.application.Validation.Login;
+package com.crm.application.Utils.Validation.Login;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

@@ -1,4 +1,4 @@
-package com.crm.application.Exceptions.Duplicate;
+package com.crm.application.Utils.Exceptions.Auth.Duplicate;
 
 public class UserDuplicateException extends Exception{
     public UserDuplicateException(String login) {

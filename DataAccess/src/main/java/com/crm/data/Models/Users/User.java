@@ -20,14 +20,12 @@ import java.util.stream.Collectors;
 @Table(name = "USRS")
 public class User implements Serializable, UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
+    @Column(nullable = false, unique = true)
+    private String login;
 
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
-    private String login;
+
     @Column(nullable = false)
     private String password;
     @ManyToMany(fetch = FetchType.LAZY)
@@ -45,7 +43,7 @@ public class User implements Serializable, UserDetails {
                 .flatMap(Set::stream)
                 .collect(Collectors.toSet());
         Set<GrantedAuthority> role_names = roles.stream()
-                .map(x -> new SimpleGrantedAuthority("ROLE_" + x.getRoleType()))
+                .map(x -> new SimpleGrantedAuthority("ROLE_" + x.getRoleType().toUpperCase()))
                 .collect(Collectors.toSet());
         permissions.addAll(role_names);
         return permissions;
@@ -74,14 +72,6 @@ public class User implements Serializable, UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {

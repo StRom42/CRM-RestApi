@@ -1,4 +1,4 @@
-package com.crm.application.Validation.Login;
+package com.crm.application.Utils.Validation.UserName;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -6,10 +6,10 @@ import java.lang.annotation.*;
 
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = LoginValidator.class)
+@Constraint(validatedBy = UserNameValidator.class)
 @Documented
-public @interface ValidLogin {
-    String message() default "Invalid login";
+public @interface ValidUserName {
+    String message() default "Invalid user name";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }

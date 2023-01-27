@@ -5,6 +5,8 @@ dependencies {
     implementation project(':DataAccess')
     implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: springVersion
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: springVersion
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: jsonwebtokenVersion
+
 }
 
 test {

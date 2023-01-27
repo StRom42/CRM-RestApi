@@ -1,9 +1,11 @@
 package com.crm.web.Config;
 
+import com.crm.web.Utils.AuthTokenFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiKey;
 import springfox.documentation.service.AuthorizationScope;
 import springfox.documentation.service.BasicAuth;
 import springfox.documentation.service.SecurityReference;
@@ -19,7 +21,7 @@ import java.util.List;
 @EnableSwagger2
 public class SwaggerConfiguration {
 
-    private final String BASE_AUTH = "basic_auth";
+    private final String BASE_AUTH = "JWT";
     @Bean
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2)
@@ -28,7 +30,8 @@ public class SwaggerConfiguration {
                 .paths(PathSelectors.any())
                 .build()
                 .pathMapping("/")
-                .securitySchemes(Collections.singletonList(new BasicAuth(BASE_AUTH)))
+                .securitySchemes(Collections.singletonList(
+                        new ApiKey(BASE_AUTH, AuthTokenFilter.AUTH_HEADER, "header")))
                 .securityContexts(Collections.singletonList(securityContext()));
     }
 
